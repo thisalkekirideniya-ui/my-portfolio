@@ -40,8 +40,8 @@ export default function Hero() {
       
       {/* LEFT CONTENT */}
       <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 30}}
         transition={{ duration: 1 }}
         className="flex-1 text-center md:text-left z-10"
       >
@@ -66,9 +66,9 @@ export default function Hero() {
 
         {/* SOCIAL MEDIA ICONS SECTION - CUSTOM SVGS */}
         <div className="flex items-center justify-center md:justify-start gap-6 mt-8">
-          <SocialLink href="https://linkedin.com/in/yourusername" platform="linkedin" />
-          <SocialLink href="https://facebook.com/yourusername" platform="facebook" />
-          <SocialLink href="https://instagram.com/yourusername" platform="instagram" />
+          <SocialLink href="https://www.linkedin.com/in/thisal-kekirideniya-0662a027b?utm_source=share_via&utm_content=profile&utm_medium=member_android" platform="linkedin" />
+          <SocialLink href="https://www.facebook.com/share/1AwgAcV6vo/" platform="facebook" />
+          <SocialLink href="https://www.instagram.com/thixall._?igsh=MXY1d3FjeWtpN3htYg==" platform="instagram" />
         </div>
 
         <motion.button 
