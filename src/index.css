@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-dark: #050505;
+  --color-card: #0f0f12;
+  --color-accent: #aa3bff;
+  --font-sans: "Inter", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-bg-dark text-slate-300 antialiased selection:bg-accent/30;
+    font-family: var(--font-sans);
+  }
+}
+
+.glow-mesh {
+  background-image: radial-gradient(at 0% 0%, rgba(170, 59, 255, 0.1) 0px, transparent 50%),
+                    radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.05) 0px, transparent 50%);
+}
