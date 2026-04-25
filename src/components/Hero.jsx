@@ -57,7 +57,7 @@ export default function Hero() {
         </h2>
         
         <h1 className="text-5xl md:text-7xl font-bold tracking-tighter text-white mt-2 mb-4 italic">
-          Thisal Kekirideniya
+          Thisall Kekirideniya
         </h1>
 
         <h3 className="text-3xl md:text-4xl font-medium text-slate-300">
