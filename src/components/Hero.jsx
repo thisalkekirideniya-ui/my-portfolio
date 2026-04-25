@@ -9,7 +9,6 @@ export default function Hero() {
   const [loopNum, setLoopNum] = useState(0);
   const typingSpeed = 150;
 
-  // The final word in this array will be the one that stops the animation
   const words = useMemo(() => ["Artist", "Full Stack Developer"], []);
 
   useEffect(() => {
@@ -19,18 +18,12 @@ export default function Hero() {
 
     let timer = setTimeout(() => {
       if (!isDeleting) {
-        // TYPING LOGIC
         setDisplayText(fullText.substring(0, displayText.length + 1));
-        
         if (displayText === fullText) {
-          // If it's the last word, we STOP here and don't set isDeleting to true
-          if (isLastWord) {
-             return; 
-          }
+          if (isLastWord) return; 
           setTimeout(() => setIsDeleting(true), 1500);
         }
       } else {
-        // DELETING LOGIC
         setDisplayText(fullText.substring(0, displayText.length - 1));
         if (displayText === "") {
           setIsDeleting(false);
@@ -40,35 +33,35 @@ export default function Hero() {
     }, isDeleting ? 50 : typingSpeed);
 
     return () => clearTimeout(timer);
-  }, [displayText, isDeleting, loopNum, words]);
+  }, [displayText, isDeleting, loopNum, words, typingSpeed]);
 
   return (
-    <section className="h-screen flex flex-col md:flex-row items-center justify-between px-10 md:px-20 gap-10 overflow-hidden">
+    <section className="min-h-screen flex flex-col-reverse md:flex-row items-center justify-center md:justify-between px-6 md:px-20 py-20 md:py-0 gap-10 overflow-hidden bg-[#050505]">
       
       {/* LEFT CONTENT */}
       <motion.div 
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="flex-1 text-left z-10"
+        className="flex-1 text-center md:text-left z-10"
       >
-        <h2 className="text-2xl md:text-3xl font-light text-slate-400 tracking-tight">
+        <h2 className="text-xl md:text-3xl font-light text-slate-400 tracking-tight">
           Hello, It's Me
         </h2>
         
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tighter text-white mt-2 mb-4 italic">
+        <h1 className="text-4xl md:text-7xl font-bold tracking-tighter text-white mt-2 mb-4 italic leading-tight">
           Thisal Kekirideniya
         </h1>
 
-        <h3 className="text-3xl md:text-4xl font-medium text-slate-300">
+        <h3 className="text-2xl md:text-4xl font-medium text-slate-300">
           I'm <span className="text-accent font-bold border-r-2 border-accent pr-2 transition-all">
             {displayText}
           </span>
         </h3>
 
-        <p className="text-slate-500 max-w-lg mt-8 text-lg font-light leading-relaxed">
+        <p className="text-slate-500 max-w-lg mx-auto md:mx-0 mt-6 text-base md:text-lg font-light leading-relaxed">
           Transforming business visions into production-ready reality. With deep expertise in the MERN stack, 
-          I build secure, high-traffic platforms optimized for speed, conversion, and seamless user experiences.
+          I build secure, high-traffic platforms optimized for speed and seamless user experiences.
         </p>
 
         <motion.button 
@@ -82,24 +75,23 @@ export default function Hero() {
 
       {/* RIGHT IMAGE SECTION */}
       <motion.div 
-        initial={{ opacity: 0, scale: 0.8, x: 50 }}
-        animate={{ opacity: 1, scale: 1, x: 0 }}
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.2, ease: "easeOut" }}
-        className="flex-1 relative flex justify-center items-center"
+        className="flex-1 relative flex justify-center items-center w-full"
       >
-        {/* Luxury Glow behind photo */}
-        <div className="absolute w-72 h-72 md:w-[450px] md:h-[450px] bg-accent/20 rounded-full blur-[100px] -z-10 animate-pulse" />
+        {/* Luxury Glow behind photo - Scaled for mobile */}
+        <div className="absolute w-60 h-60 md:w-[450px] md:h-[450px] bg-accent/20 rounded-full blur-[80px] md:blur-[100px] -z-10 animate-pulse" />
         
         <motion.div
-          animate={{ y: [0, -20, 0] }}
+          animate={{ y: [0, -15, 0] }}
           transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-          className="relative rounded-[3rem] overflow-hidden border border-white/10 p-2 bg-white/5 backdrop-blur-sm"
+          className="relative rounded-[2rem] md:rounded-[3rem] overflow-hidden border border-white/10 p-1.5 bg-white/5 backdrop-blur-sm"
         >
-          {/* YOUR PHOTO SOURCE */}
           <img 
             src={heroImg} 
             alt="Thisal Kekirideniya" 
-            className="w-72 md:w-[400px] h-auto rounded-[2.5rem] object-cover grayscale hover:grayscale-0 transition-all duration-700 cursor-pointer"
+            className="w-64 md:w-[400px] h-auto rounded-[1.8rem] md:rounded-[2.5rem] object-cover transition-all duration-700 cursor-pointer"
           />
         </motion.div>
       </motion.div>
