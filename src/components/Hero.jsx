@@ -64,22 +64,23 @@ export default function Hero() {
           I build secure, high-traffic platforms optimized for speed and seamless user experiences.
         </p>
 
-        {/* SOCIAL MEDIA ICONS SECTION - CUSTOM SVGS */}
+        {/* SOCIAL MEDIA ICONS SECTION - UPDATED WITH TIKTOK */}
         <div className="flex items-center justify-center md:justify-start gap-6 mt-8">
-          <SocialLink href="https://www.linkedin.com/in/thisal-kekirideniya-0662a027b?utm_source=share_via&utm_content=profile&utm_medium=member_android" platform="linkedin" />
+          <SocialLink href="https://www.linkedin.com/in/thisal-kekirideniya-0662a027b" platform="linkedin" />
           <SocialLink href="https://www.facebook.com/share/1AwgAcV6vo/" platform="facebook" />
-          <SocialLink href="https://www.instagram.com/thixall._?igsh=MXY1d3FjeWtpN3htYg==" platform="instagram" />
+          <SocialLink href="https://www.instagram.com/thixall._" platform="instagram" />
+          <SocialLink href="https://www.tiktok.com/@your_username" platform="tiktok" />
         </div>
 
-         <motion.a 
-           href="/resume.pdf" // This points to public/resume.pdf
-           download="Thisal_Basilu_Resume.pdf" // The name the file will have when downloaded
-           whileHover={{ scale: 1.05 }}
-           whileTap={{ scale: 0.95 }}
-           className="inline-block mt-10 px-8 py-4 bg-accent text-black font-bold rounded-full uppercase text-xs tracking-widest shadow-[0_0_20px_rgba(170,59,255,0.3)] cursor-pointer"
-          >
-           Download My Resume
-          </motion.a>
+        <motion.a 
+          href="/resume.pdf" 
+          download="Thisal_Basilu_Resume.pdf" 
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="inline-block mt-10 px-8 py-4 bg-accent text-black font-bold rounded-full uppercase text-xs tracking-widest shadow-[0_0_20px_rgba(170,59,255,0.3)] cursor-pointer"
+        >
+          Download My Resume
+        </motion.a>
       </motion.div>
 
       {/* RIGHT IMAGE SECTION */}
@@ -122,6 +123,9 @@ function SocialLink({ href, platform }) {
         <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
         <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
       </>
+    ),
+    tiktok: (
+      <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
     ),
   };
 

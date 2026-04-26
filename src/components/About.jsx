@@ -28,7 +28,7 @@ export default function About() {
                 I am a <span className="text-white font-medium">Full Stack Developer</span> focused on the complete engineering lifecycle. I don't just build features; I bridge the gap between a business vision and a live, high-traffic reality.
               </p>
               <p>
-                My expertise lies in the **end-to-end execution** of digital products. From designing scalable database schemas to crafting immersive interfaces and managing cloud deployments, I take full ownership of the stack.
+                My expertise lies in the end to end execution of digital products. From designing scalable database schemas to crafting immersive interfaces and managing cloud deployments, I take full ownership of the stack.
               </p>
             </div>
           </div>
