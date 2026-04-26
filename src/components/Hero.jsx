@@ -69,7 +69,7 @@ export default function Hero() {
           <SocialLink href="https://www.linkedin.com/in/thisal-kekirideniya-0662a027b" platform="linkedin" />
           <SocialLink href="https://www.facebook.com/share/1AwgAcV6vo/" platform="facebook" />
           <SocialLink href="https://www.instagram.com/thixall._" platform="instagram" />
-          <SocialLink href="https://www.tiktok.com/@your_username" platform="tiktok" />
+          <SocialLink href="https://www.tiktok.com/@thisal_basilu?_r=1&_t=ZS-95rBjFpDFwY" platform="tiktok" />
         </div>
 
         <motion.a 
