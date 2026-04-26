@@ -41,7 +41,7 @@ export default function Hero() {
       {/* LEFT CONTENT */}
       <motion.div 
         initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 30}}
+        animate={{ opacity: 1, y: 0}}
         transition={{ duration: 1 }}
         className="flex-1 text-center md:text-left z-10"
       >
@@ -71,13 +71,15 @@ export default function Hero() {
           <SocialLink href="https://www.instagram.com/thixall._?igsh=MXY1d3FjeWtpN3htYg==" platform="instagram" />
         </div>
 
-        <motion.button 
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="mt-10 px-8 py-4 bg-accent text-black font-bold rounded-full uppercase text-xs tracking-widest shadow-[0_0_20px_rgba(170,59,255,0.3)]"
-        >
-          View My Work
-        </motion.button>
+         <motion.a 
+           href="/resume.pdf" // This points to public/resume.pdf
+           download="Thisal_Basilu_Resume.pdf" // The name the file will have when downloaded
+           whileHover={{ scale: 1.05 }}
+           whileTap={{ scale: 0.95 }}
+           className="inline-block mt-10 px-8 py-4 bg-accent text-black font-bold rounded-full uppercase text-xs tracking-widest shadow-[0_0_20px_rgba(170,59,255,0.3)] cursor-pointer"
+          >
+           Download My Resume
+          </motion.a>
       </motion.div>
 
       {/* RIGHT IMAGE SECTION */}
