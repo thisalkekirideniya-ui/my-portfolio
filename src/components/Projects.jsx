@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import avStoreImg from "../assets/avstore.png"; 
 import dynamicImg from "../assets/dynamic.png";
+import weddingImg from "../assets/wedding.png";
 
 const PROJECTS = [
   { 
@@ -19,6 +20,14 @@ const PROJECTS = [
     tech: ["React", "Framer Motion", "Tailwind css"],
     img: dynamicImg,
     link: "https://dynamicavtechnologies.com"
+  },
+  { 
+    title: "Shehani & Nethaka Wedding",
+    cat: "Event Invitation", 
+    desc: "A responsive digital wedding invitation  for Shehani & Nethaka, elegantly showcasing event details, schedule, venue, and couple story online.", 
+    tech: ["React", "Framer Motion", "Tailwind css"],
+    img: weddingImg,
+    link: "https://wedding-invitation-nine-gray.vercel.app/"
   }
 ];
 
