@@ -5,6 +5,8 @@ import dynamicImg from "../assets/dynamic.png";
 import weddingImg from "../assets/wedding.png";
 import eliteImg from "../assets/elite.png";
 import toursImg from "../assets/tours.png";
+import ceyloncakesImg from "../assets/ceyloncakes.png";
+import summerImg from "../assets/summer.png";
 
 const PRODUCTION_PROJECTS = [
   { 
@@ -30,10 +32,42 @@ const PRODUCTION_PROJECTS = [
     tech: ["React", "Framer Motion", "Tailwind css", "email.js"],
     img: weddingImg,
     link: "https://wedding-invitation-nine-gray.vercel.app/"
+  },
+  {
+    title: "Ceylon Cakes",
+    cat: "Food & Beverage",
+    desc: "A polished bakery and pastry storefront designed to showcase premium cakes, seasonal offerings, and seamless online ordering.",
+    tech: ["React", "Tailwind v4", "Framer Motion", "Node.js"],
+    img: ceyloncakesImg,
+    link: "https://www.ceyloncakes.com/"
+  },
+  {
+    title: "Summer Bliss Weddings",
+    cat: "Wedding Services",
+    desc: "A refined event-site experience for wedding planning and celebration stories, built to highlight packages, galleries, and client testimonials.",
+    tech: ["React", "Firebase", "Tailwind css", "Express"],
+    img: summerImg,
+    link: "https://summerblissweddings.lk/"
   }
 ];
 
 const UPCOMING_PROJECTS = [
+  {
+    title: "DIZANDA",
+    cat: "Enterprise Security",
+    desc: "A future-ready infrastructure site for DIZANDA, built to support security operations with enterprise-grade design and operational clarity.",
+    tech: ["React", "Tailwind css", "Framer Motion", "Node.js"],
+    img: null,
+    link: "#"
+  },
+  {
+    title: "Wovss Security",
+    cat: "Cyber Defense",
+    desc: "A strategic landing experience for Wovss Security, focused on trust, threat intelligence, and premium digital security services.",
+    tech: ["React", "Tailwind css", "Firebase", "Express"],
+    img: null,
+    link: "#"
+  },
   {
     title: "Elite Gym",
     cat: "Corporate",
@@ -81,11 +115,23 @@ export default function Projects() {
             onClick={() => window.open(p.link, "_blank")}
           >
             <div className="relative h-64 md:h-[350px] w-full overflow-hidden rounded-[2rem] border border-white/10 bg-[#111]">
-              <img 
-                src={p.img} 
-                alt={p.title} 
-                className="w-full h-full object-cover object-top transition-all duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100" 
-              />
+              {p.img ? (
+                <img 
+                  src={p.img} 
+                  alt={p.title} 
+                  className="w-full h-full object-cover object-top transition-all duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100" 
+                />
+              ) : (
+                <div className="relative w-full h-full bg-white flex flex-col items-center justify-center gap-4 border border-slate-200 rounded-[2rem] shadow-xl">
+                  <div className="absolute top-4 left-4 bg-black/90 text-white px-3 py-1 rounded-full text-[10px] uppercase tracking-[0.4em] font-semibold shadow-sm">
+                    Loading..... 🚧
+                  </div>
+                  <div className="flex flex-col items-center justify-center gap-2 px-6 text-center">
+                    <span className="text-[11px] font-bold tracking-[0.25em] uppercase text-slate-500">Funny Sticker Mood</span>
+                    <div className="w-16 h-[1px] bg-slate-300 animate-pulse" />
+                  </div>
+                </div>
+              )}
               <div className="absolute inset-0 bg-black/20 group-active:bg-black/40 transition-all" />
               <div className="absolute top-6 right-6 p-3 bg-accent text-black rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
                 <ArrowUpRight size={20} />
@@ -147,10 +193,14 @@ export default function Projects() {
                   className="w-full h-full object-cover object-top transition-all duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100" 
                 />
               ) : (
-                // Fallback elegant neon pattern block if an image isn't built yet
-                <div className="w-full h-full bg-gradient-to-br from-[#111] to-[#1a1a1a] flex flex-col items-center justify-center gap-2">
-                  <span className="text-[10px] font-mono tracking-widest text-slate-600 uppercase">Architecture Blueprint</span>
-                  <div className="w-12 h-[1px] bg-white/5 animate-pulse" />
+                <div className="relative w-full h-full bg-white flex flex-col items-center justify-center gap-4 border border-slate-200 rounded-[2rem] shadow-xl">
+                  <div className="absolute top-4 left-4 bg-black/90 text-white px-3 py-1 rounded-full text-[10px] uppercase tracking-[0.4em] font-semibold shadow-sm">
+                    Loading
+                  </div>
+                  <div className="flex flex-col items-center justify-center gap-2 px-6 text-center">
+                    <span className="text-[11px] font-bold tracking-[0.25em] uppercase text-slate-500">Screenshot Pending</span>
+                    <div className="w-16 h-[1px] bg-slate-300 animate-pulse" />
+                  </div>
                 </div>
               )}
               
