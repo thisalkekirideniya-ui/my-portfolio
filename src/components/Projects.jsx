@@ -7,6 +7,9 @@ import eliteImg from "../assets/elite.png";
 import toursImg from "../assets/tours.png";
 import ceyloncakesImg from "../assets/ceyloncakes.png";
 import summerImg from "../assets/summer.png";
+import wovssImg from "../assets/wovss.png";
+import eliseoImg from "../assets/eliseo.png";
+import dixaImg from "../assets/dixa.png";
 
 const PRODUCTION_PROJECTS = [
   { 
@@ -48,6 +51,22 @@ const PRODUCTION_PROJECTS = [
     tech: ["React", "Firebase", "Tailwind css", "Express"],
     img: summerImg,
     link: "https://summerblissweddings.lk/"
+  },
+  {
+    title: "WOV Security",
+    cat: "Security & CCTV",
+    desc: "A premium web presence for WOV Security, presenting executive CCTV and surveillance solutions for elite venues with discreet, luxury-grade design.",
+    tech: ["React", "Tailwind css", "Framer Motion", "Node.js"],
+    img: wovssImg,
+    link: "https://wovss.lk"
+  },
+  {
+    title: "Eliseo Beauty Lounge",
+    cat: "Beauty & Salon",
+    desc: "An elegant salon website for Eliseo Beauty Lounge, showcasing services, offers, and mobile service with seamless appointment booking.",
+    tech: ["React", "Tailwind css", "Framer Motion", "email.js"],
+    img: eliseoImg,
+    link: "https://eliseobeauty.com"
   }
 ];
 
@@ -57,15 +76,7 @@ const UPCOMING_PROJECTS = [
     cat: "Enterprise Security",
     desc: "A future-ready infrastructure site for DIZANDA, built to support security operations with enterprise-grade design and operational clarity.",
     tech: ["React", "Tailwind css", "Framer Motion", "Node.js"],
-    img: null,
-    link: "#"
-  },
-  {
-    title: "Wovss Security",
-    cat: "Cyber Defense",
-    desc: "A strategic landing experience for Wovss Security, focused on trust, threat intelligence, and premium digital security services.",
-    tech: ["React", "Tailwind css", "Firebase", "Express"],
-    img: null,
+    img: dixaImg,
     link: "#"
   },
   {

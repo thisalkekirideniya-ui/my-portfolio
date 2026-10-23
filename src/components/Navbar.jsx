@@ -14,10 +14,11 @@ export default function Navbar() {
       </div>
 
       {/* Nav Links - Hidden on very small screens or made compact */}
-      <div className="flex gap-4 md:gap-8 text-[9px] md:text-[10px] uppercase tracking-[0.3em] md:tracking-[0.5em] font-semibold text-slate-400">
-        <a href="#tools" className="hover:text-accent transition-all duration-300">Tools</a>
+      <div className="flex items-center gap-3 md:gap-8 text-[9px] md:text-[10px] uppercase tracking-[0.15em] md:tracking-[0.5em] font-semibold text-slate-400">
+        <a href="#tools" className="hidden sm:inline hover:text-accent transition-all duration-300">Tools</a>
         <a href="#work" className="hover:text-accent transition-all duration-300">Work</a>
         <a href="#about" className="hover:text-accent transition-all duration-300">About</a>
+        <a href="#packages" className="hover:text-accent transition-all duration-300">Packages</a>
         <a href="#contact" className="px-4 py-2 border border-accent/20 rounded-full hover:bg-accent hover:text-black transition-all duration-500">
           Contact
         </a>
