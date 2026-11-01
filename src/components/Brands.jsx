@@ -5,6 +5,8 @@ import darkroomLogo from "../assets/brands/darkroom.jpg";
 import wovLogo from "../assets/brands/wov.jpg";
 import dizandaLogo from "../assets/brands/dizanda.jpg";
 import eliseoLogo from "../assets/brands/eliseo.jpg";
+import moinsLogo from "../assets/brands/moins.jpg";
+import villacavoLogo from "../assets/brands/villacavo.jpg";
 
 const BRANDS = [
   { name: "Summer Bliss Weddings", logo: summerblissLogo },
@@ -13,6 +15,8 @@ const BRANDS = [
   { name: "WOV Security", logo: wovLogo },
   { name: "Dizanda", logo: dizandaLogo },
   { name: "Eliseo Aesthetics", logo: eliseoLogo },
+  { name: "Moin's Style Studio", logo: moinsLogo },
+  { name: "Villa Cavo", logo: villacavoLogo },
 ];
 
 export default function Brands() {
@@ -29,7 +33,7 @@ export default function Brands() {
       </motion.div>
 
       {/* Logo grid */}
-      <div className="max-w-4xl mx-auto px-6 grid grid-cols-3 gap-4 md:gap-8">
+      <div className="max-w-5xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
         {BRANDS.map((b, i) => (
           <motion.div
             key={b.name}

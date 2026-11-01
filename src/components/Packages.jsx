@@ -17,7 +17,7 @@ const PACKAGES = [
   },
   {
     name: "Gold",
-    price: "65,000 – 75,000",
+    price: "70,000 – 80,000",
     delivery: "15 Days",
     featured: true,
     features: [
@@ -29,11 +29,12 @@ const PACKAGES = [
       "Contact form + Google Map integration",
       "Basic SEO optimization",
       "1 month free consultation",
+      "1 professional promo video for your business after launch",
     ],
   },
   {
     name: "Platinum",
-    price: "80,000 – 85,000",
+    price: "80,000 – 100,000",
     delivery: "25 Days",
     features: [
       "5–6 Pages Website (custom structure)",
@@ -44,6 +45,7 @@ const PACKAGES = [
       "Speed optimization",
       "Security setup",
       "6 month free consultation",
+      "2 professional promo videos for your business after launch",
     ],
   },
 ];
@@ -125,9 +127,9 @@ export default function Packages() {
                   )}
                 </div>
 
-                <div className="flex items-baseline gap-2 whitespace-nowrap">
+                <div className="flex items-baseline gap-2 whitespace-nowrap md:flex-col md:items-start md:gap-1 xl:flex-row xl:items-baseline xl:gap-2">
                   <span className="text-xs font-bold uppercase tracking-[0.2em] text-slate-500">Rs.</span>
-                  <span className={`text-2xl md:text-xl lg:text-[1.65rem] xl:text-3xl font-bold tracking-tight tabular-nums ${p.featured ? "bg-gradient-to-r from-white to-accent bg-clip-text text-transparent" : "text-white"}`}>
+                  <span className={`text-2xl md:text-base lg:text-2xl xl:text-3xl font-bold tracking-tight tabular-nums ${p.featured ? "bg-gradient-to-r from-white to-accent bg-clip-text text-transparent" : "text-white"}`}>
                     {p.price}
                   </span>
                 </div>
